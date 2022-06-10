@@ -15,18 +15,18 @@ function countObjItems(j){
 
 
 async function fetchTags(){
-    const tagsURL = 'https://api.redtube.com/?data=redtube.Tags.getTagList&output=json';
-    const tagList = [];
+        const tagsURL = 'https://api.redtube.com/?data=redtube.Tags.getTagList&output=json';
+        const tagList = [];
 
-    const response = await fetch(tagsURL)
-    const tagsJSON = await response.json()
-    console.log(tagsJSON)
-    for (key in tagsJSON['tags']){
-        const tagObj = tagsJSON['tags'][key]['tag']['tag_name']//[subKey]
-        console.log(tagObj)
-        tagList.push(tagObj)
-    }
-    console.log(tagList.length)
+        const response = await fetch(tagsURL)
+        const tagsJSON = await response.json()
+        console.log(tagsJSON)
+        for (key in tagsJSON['tags']){
+            const tagObj = tagsJSON['tags'][key]['tag']['tag_name']//[subKey]
+            console.log(tagObj)
+            tagList.push(tagObj)
+        }
+        console.log(tagList.length)       
 }
 
 //fetchTags();

@@ -9,7 +9,7 @@ function splitSearchString(searchString){
 function createSearchReq(searchString,tagsArray,page){
     const searchQuery = splitSearchString(searchString)
     const searchTags = tagsArray.join('+')
-    const searchURL = 'https://www.eporner.com/api/v2/video/search/?query=' + searchQuery + '&' + searchTags + '&per_page=100&page=' + page + '&thumbsize=big&order=top-weekly&gay=0&lq=1&format=json';
+    const searchURL = 'https://www.eporner.com/api/v2/video/search/?query=' + searchQuery + '&' + searchTags + '&per_page=1000&page=' + page + '&thumbsize=big&order=top-weekly&gay=0&lq=1&format=json';
     //console.log(searchURL)
     return searchURL
 }
